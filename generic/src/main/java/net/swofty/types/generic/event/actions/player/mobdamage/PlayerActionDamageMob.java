@@ -75,6 +75,12 @@ public class PlayerActionDamageMob extends SkyBlockEvent {
                 .critical(critical)
                 .display(targetEntity.getInstance());
 
+        if(mob.getEntityType() == EntityType.ZOMBIE){
+            player.playSound(Sound.sound(Key.key("entity.zombie.hurt"), Sound.Source.PLAYER, 1f, 1f), Sound.Emitter.self());
+        }else if(mob.getEntityType() == EntityType.WOLF){
+            player.playSound(Sound.sound(Key.key("entity.wolf.hurt"), Sound.Source.PLAYER, 1f, 1f), Sound.Emitter.self());
+        }
+
         targetLivingEntity.damage(new Damage(DamageType.PLAYER_ATTACK, player, player, player.getPosition(), (float) valueEvent.getValue()));
 
         double ferocity = player.getStatistics().allStatistics().getOverall(ItemStatistic.FEROCITY);

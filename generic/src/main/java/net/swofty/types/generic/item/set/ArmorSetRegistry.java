@@ -3,10 +3,16 @@ package net.swofty.types.generic.item.set;
 import lombok.Getter;
 import net.swofty.types.generic.item.ItemType;
 import net.swofty.types.generic.item.set.impl.ArmorSet;
+import net.swofty.types.generic.item.set.sets.LeafletSet;
+import net.swofty.types.generic.item.set.sets.MinerOutfitSet;
+import net.swofty.types.generic.item.set.sets.StrongDragonSet;
+import net.swofty.types.generic.item.set.sets.YoungDragonSet;
 import net.swofty.types.generic.item.set.sets.*;
 
 @Getter
 public enum ArmorSetRegistry {
+    STRONG_DRAGON(StrongDragonSet.class, ItemType.STRONG_DRAGON_BOOTS, ItemType.STRONG_DRAGON_LEGGINGS, ItemType.STRONG_DRAGON_CHESTPLATE, ItemType.STRONG_DRAGON_HELMET),
+    YOUNG_DRAGON(YoungDragonSet.class, ItemType.YOUNG_DRAGON_BOOTS, ItemType.YOUNG_DRAGON_LEGGINGS, ItemType.YOUNG_DRAGON_CHESTPLATE, ItemType.YOUNG_DRAGON_HELMET),
     LEAFLET(LeafletSet.class, ItemType.LEAFLET_BOOTS, ItemType.LEAFLET_LEGGINGS, ItemType.LEAFLET_CHESTPLATE, ItemType.LEAFLET_HELMET),
     MINOR_OUTFIT(MinerOutfitSet.class, ItemType.MINERS_OUTFIT_BOOTS, ItemType.MINERS_OUTFIT_LEGGINGS, ItemType.MINERS_OUTFIT_CHESTPLATE, ItemType.MINERS_OUTFIT_HELMET),
     CHEAP_TUXEDO(CheapTuxedoSet.class, ItemType.CHEAP_TUXEDO_BOOTS, ItemType.CHEAP_TUXEDO_LEGGINGS, ItemType.CHEAP_TUXEDO_CHESTPLATE, null),
